@@ -1,0 +1,29 @@
+.Header {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.04);
+
+  z-index: 1;
+
+  .sections-container {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .section {
+      color: white;
+      font-weight: bold;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 1.3s;
+      }
+    }
+  }
+}
