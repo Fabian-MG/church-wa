@@ -4,6 +4,7 @@ import sliderImages from "./slider-images";
 import Slide from "./slide/slide.component";
 import { ReactComponent as LeftArrow } from "../../assets/leftarrow.svg";
 import { ReactComponent as RightArrow } from "../../assets/rigtharrow.svg";
+import { ReactComponent as DownArrow } from "../../assets/down-arrow.svg";
 
 import "./slider.styles.scss";
 
@@ -12,8 +13,8 @@ const Slider = () => {
   const [images] = useState(sliderImages.length);
 
   useEffect(() => {
-    setTimeout(() => nextSlide(), 9000);
-    return () => clearTimeout()
+    let timeout = setTimeout(() => nextSlide(), 8000);
+    return () => clearTimeout(timeout);
   }, [currentIndex]);
 
   const nextSlide = () => {
@@ -46,6 +47,9 @@ const Slider = () => {
             nextSlide();
           }}
         />
+      </div>
+      <div className="down-arrow-container">
+        <DownArrow className='down-arrow'/>
       </div>
     </div>
   );

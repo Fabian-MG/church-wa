@@ -1,0 +1,56 @@
+.menu {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+  
+
+  .title {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin-top: 3px;
+  }
+
+  .hamburguer {
+    width: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    .line1,
+    .line2,
+    .line3 {
+      width: 20px;
+      height: 1px;
+      margin-top: 4px;
+      border-radius: 7px;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    &.toggle {
+      .line1 {
+        transform: rotate(-45deg) translate(-2px, 4px);
+      }
+      .line2 {
+        opacity: 0;
+      }
+      .line3 {
+        transform: rotate(45deg) translate(-2.5px, -5px);
+      }
+    }
+  }
+
+  display: none;
+
+  @media only screen and (max-width: 800px) {
+    display: flex;
+    margin-right: 10px;
+  }
+}

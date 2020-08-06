@@ -6,18 +6,19 @@
 
   .arrow-container {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     top: 50%;
-    z-index: 1;
+    
     transition: transform 0.8s;
 
     &.left {
-      left: 40px;
+      left: 20px;
+      z-index: 1;
     }
 
     &.rigth {
-      right: 40px;
+      right: 20px;
     }
 
     &:hover {
@@ -26,5 +27,29 @@
       stroke-width: 1.15;
       stroke: rgba(255, 255, 255, 0.666);
     }
+  }
+
+  .down-arrow-container {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+
+    .down-arrow {
+      width: 25px;
+      height: 25px;
+      fill: white;
+      animation: updown 1.2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes updown {
+  from {
+    transform: translateY(0%)
+  }
+  to{
+    transform: translateY(60%);
   }
 }
