@@ -3,16 +3,28 @@
   height: 60px;
   position: fixed;
   display: flex;
-
+  transition: all 0.3s ease;
   z-index: 1;
 
+  &.active {
+    background: rgba(1, 4, 35, 0.965)
+  }
   .logo-container {
     width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
+
+    .logo {
+      z-index: 2;
+      background-image: url('./qrologo.png');
+      background-size: contain;
+      background-color: transparent;
+      width: 60px;
+      height: 60px;
+    }
 
     .title {
       color: rgba(255, 255, 255, 0.761);
