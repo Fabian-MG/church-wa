@@ -48,9 +48,11 @@ const Slider = () => {
           }}
         />
       </div>
-      <div className="down-arrow-container">
+      {/* 
+            <div className="down-arrow-container">
         <DownArrow className='down-arrow'/>
       </div>
+      */}
     </div>
   );
 };

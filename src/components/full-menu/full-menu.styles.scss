@@ -15,10 +15,11 @@
     .section {
       color: rgba(255, 255, 255, 0.768);
       font-size: 0.9rem;
-      transition: all 1s ease;
+      transition: all 0.5s ease;
 
       &:hover {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.768);
+        transform: scale(1.05);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.768);
       }
     }
   }

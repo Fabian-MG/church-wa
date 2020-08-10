@@ -12,7 +12,7 @@ const Header = () => {
 
   React.useEffect(() => {
     const onScroll = () => {
-      const navigationHeight = 5 * 8;
+      const navigationHeight = 360;
       if (window.scrollY + navigationHeight < windowHeight) {
         setIsTop(true);
       } else {
@@ -39,11 +39,7 @@ const Header = () => {
 
   return (
     <div className={`Header ${isTop ? "" : "active"}`}>
-      <div className="logo-container">
-        <div className='logo'/>
-        <span className="title">Hola</span>
-
-      </div>
+      <div className="logo-container"></div>
       <div className="menu-container">
         <FullMenu toggle={toggle} />
         <CollapsableMenu collapseState={{ toggle, setToggle }} />

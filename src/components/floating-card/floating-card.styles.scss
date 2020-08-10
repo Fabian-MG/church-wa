@@ -1,0 +1,120 @@
+.floating-card-container {
+  --mainColor: rgba(255, 255, 255, 0.768);
+}
+
+.floating-card-container {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+
+  .card-container {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+    padding: 40px 90px;
+    color: rgba(255, 255, 255, 0.768);
+    transition: all 0.5s ease;
+
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+    background: rgba(2, 6, 58, 0.979);
+    box-shadow: 0 8px 23px 0 rgba(0, 0, 0, 0.51),
+      0 6px 50px 0 rgba(0, 0, 0, 0.544);
+
+    .card-title {
+      width: 80%;
+      font-size: 1.7rem;
+      padding: 2px;
+
+      .sub {
+        padding: 0 5px;
+        background: rgba(255, 255, 255, 0.768);
+        color: black;
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 20px 2px;
+      }
+    }
+
+    .card-description {
+      width: 80%;
+      text-align: justify;
+    }
+
+    .card-btn {
+      color: rgba(255, 255, 255, 0.768);
+      width: 130px;
+      font-weight: bold;
+      margin-top: 30px;
+      font-size: 1.1rem;
+      background: none;
+      padding: 5px;
+      transition: transform 0.6s ease;
+      border-radius: 2px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.768);
+      transition: transform 0.6s ease;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .arrow {
+        margin-left: 10px;
+        width: 25px;
+        height: 25px;
+        fill: rgba(255, 255, 255, 0.768);
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .image-container {
+    width: 27%;
+    height: 70%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.6s ease;
+
+    position: absolute;
+    top: 15%;
+    left: 53%;
+
+    box-shadow: 0 8px 23px 0 rgba(0, 0, 0, 0.2),
+      0 6px 50px 0 rgba(0, 0, 0, 0.19);
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-image: url("https://images.pexels.com/photos/1687093/pexels-photo-1687093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+
+      & .background-image {
+        transform: scale(1.1);
+        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
+
+      & .content {
+        opacity: 0.9;
+      }
+    }
+  }
+}

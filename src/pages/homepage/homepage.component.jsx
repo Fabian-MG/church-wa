@@ -1,12 +1,17 @@
 import React from "react";
+
 import Slider from "../../components/slider/slider.component";
+import FloatingCard from "../../components/floating-card/floating-card.component";
+import Section from "../../components/section/section.component";
+import MinistriesPreview from "../../components/ministries-preview/ministries-preview.component";
 
 const HomePage = () => {
   return (
     <div className="HomePage">
       <Slider />
-      <div style={{ height: "800px", width: "100vw", background: "white" }}>
-        </div>
+      <Section />
+      <FloatingCard />
+      <MinistriesPreview />
     </div>
   );
 };
