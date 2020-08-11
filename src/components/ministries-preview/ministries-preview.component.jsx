@@ -30,16 +30,16 @@ const ministries = [
 const MinistriesPreview = () => {
   return (
     <div className="ministries-preview-container">
-      {ministries.map(({ imageUrl, title, description }) => (
-        <div className="container">
+      {ministries.map(({ imageUrl, title, description },idx) => (
+        <div key={idx} className="container">
           <div
             className="background-image"
             style={{ backgroundImage: `url(${imageUrl})` }}
           />
           <div className="content">
-            <h2>{title}</h2>
+            <h2>{title.toUpperCase()}</h2>
             <p>{description}</p>
-            <button> Ver más </button>
+            <button> Saber más </button>
           </div>
         </div>
       ))}

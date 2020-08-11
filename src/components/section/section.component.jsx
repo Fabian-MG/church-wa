@@ -26,6 +26,7 @@ const Section = () => {
       <div className="video-container">
         <iframe
           className='video'
+          title='video'
           src="https://www.youtube.com/embed/g_W9af_CQDs"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; picture-in-picture"

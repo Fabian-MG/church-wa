@@ -2,8 +2,9 @@
   width: 100vw;
   height: 400px;
   display: flex;
-  margin-top: 15px;
+  // margin: 15px 0 35px 0;
 
+  
   .container {
     width: 33.3%;
     height: 100%;
@@ -33,11 +34,47 @@
       justify-content: center;
       text-align: center;
       align-items: center;
+
+      h2 {
+        font-size: 1.7rem;
+        transition: transform 0.6s ease;
+
+      }
+
+      p {
+        transition: transform 0.6s ease;
+
+      }
+
+      button {
+        width: 120px;
+        height: 40px;
+        margin-top: 20px;
+        background: rgba(14, 12, 71, 0.999);
+        transition: all 0.6s ease;
+
+        border: none;
+        color: white;
+        font-weight: bold;
+        opacity: 0;
+      }
     }
 
     &:hover {
+
         .content {
             background: rgba(0, 0, 0, 0.054);
+            
+            button {
+              opacity: 1;
+              cursor: pointer;
+            }
+
+            h2,
+            p,
+            button {
+              transform: scale(1.1);
+            }
         }
         .background-image {
             transform: scale(0.99);

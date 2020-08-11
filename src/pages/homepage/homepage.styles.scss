@@ -1,12 +1,38 @@
 .HomePage {
-  background: #708090;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 
-  .section {
-    width: 100vw;
-    height: 800px !important;
-    background: black;
+  --titleColor: rgba(155, 151, 151, 0.299);
+
+  .section-title {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    color: rgba(95, 94, 94, 0.863);
+    text-align: center;
+    
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 10%;
+      top: -40%;
+      display: inline-block;
+      width: 30%;
+      height: 100%;
+      border-bottom: 2px solid var(--titleColor);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 30%;
+      height: 100%;
+      left: 10%;
+      top: -40%;
+      border-bottom: 2px solid var(--titleColor);
+    }
   }
 }

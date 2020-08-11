@@ -4,7 +4,7 @@ import sliderImages from "./slider-images";
 import Slide from "./slide/slide.component";
 import { ReactComponent as LeftArrow } from "../../assets/leftarrow.svg";
 import { ReactComponent as RightArrow } from "../../assets/rigtharrow.svg";
-import { ReactComponent as DownArrow } from "../../assets/down-arrow.svg";
+// import { ReactComponent as DownArrow } from "../../assets/down-arrow.svg";
 
 import "./slider.styles.scss";
 
