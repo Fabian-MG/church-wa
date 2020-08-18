@@ -1,17 +1,13 @@
 import React from "react";
 
 import "./section.styles.scss";
+import CustomLinkButton from "../custom-link-button/custom-link-button.component";
 
 const Section = () => {
   return (
     <div className="section-container">
       <div className="content-container">
-        <h1>
-          {" "}
-    
-          Lorem Ipsum Dolor Sit Amet{" "}
-         
-        </h1>
+        <h1> Lorem Ipsum Dolor Sit Amet </h1>
         <p>
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -21,12 +17,12 @@ const Section = () => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum."
         </p>
-        <button>Conoce más</button>
+        <CustomLinkButton title="Conoce Más" path="" />
       </div>
       <div className="video-container">
         <iframe
-          className='video'
-          title='video'
+          className="video"
+          title="video"
           src="https://www.youtube.com/embed/g_W9af_CQDs"
           frameBorder="0"
           allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
