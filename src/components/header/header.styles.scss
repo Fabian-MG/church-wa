@@ -4,11 +4,12 @@
   position: fixed;
   display: flex;
   transition: all 0.3s ease;
-  z-index: 1;
+  z-index: 2;
 
   &.active {
     background: rgba(1, 4, 35, 0.965)
   }
+  
   .logo-container {
     width: 40%;
     height: 100%;

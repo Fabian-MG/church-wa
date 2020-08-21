@@ -4,8 +4,9 @@ import CollapsableMenu from "../collapsable-menu/collapsable-menu.component";
 import FullMenu from "../full-menu/full-menu.component";
 
 import "./header.styles.scss";
+import { withRouter } from "react-router-dom";
 
-const Header = () => {
+const Header = ({location}) => {
   const [toggle, setToggle] = useState(false);
   const [isTop, setIsTop] = React.useState(true);
   const [windowHeight, setWindowHeight] = React.useState(0);
@@ -37,8 +38,10 @@ const Header = () => {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  const mainColor = location.pathname !== '/' && 'rgba(1, 4, 35, 0.965)'
+
   return (
-    <div className={`Header ${isTop ? "" : "active"}`}>
+    <div className={`Header ${isTop ? "" : "active"}`} style={{background: mainColor}}>
       <div className="logo-container"></div>
       <div className="menu-container">
         <FullMenu toggle={toggle} />
@@ -48,4 +51,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

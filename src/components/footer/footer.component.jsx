@@ -17,13 +17,19 @@ const Footer = () => {
         <Link className="section" to="/">
           Sobre Nosotros
         </Link>
+        |
         <Link className="section" to="/">
           FAQ
         </Link>
-
+        |
+        <Link className="section" to="/">
+          Nuestros Lideres
+        </Link>
+        |
         <Link className="section" to="/">
           Localizaciones
         </Link>
+        |
         <Link className="section" to="/">
           Contacto
         </Link>
